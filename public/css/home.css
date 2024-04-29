@@ -4,6 +4,7 @@
   flex-direction: column;
 }
 
+/* GLOBAL CATEGORY */
 .container .category_top {
   width: 100%;
   height: auto;
@@ -37,6 +38,60 @@
 
 .container .category_top a:hover {
   border-bottom: 2px solid #041e42;
+}
+
+/* GLOBAL PAGEONATION */
+
+.container .pagionation_box {
+  margin-top: 30px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.container .pagionation_box .pagionation_main {
+  width: auto;
+  height: 24px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.pagionation_main img {
+  cursor: pointer;
+}
+
+.container .pagionation_main .pagionation_dot {
+  width: auto;
+  height: auto;
+  margin: 0 20px;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.container .pagionation_dot .dot {
+  width: 20px;
+  height: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.container .pagionation_dot .dot.active {
+  border: 2px solid #112137;
+}
+
+.container .pagionation_dot .dot div {
+  width: 4px;
+  height: 4px;
+  background: #112137;
+  border-radius: 50%;
 }
 
 .header_frame {
@@ -419,7 +474,7 @@
   flex-direction: column;
 }
 
-.container .product_wrapper {
+.selling_product_frame .container .product_wrapper {
   position: relative;
   margin-top: 30px;
   width: 100%;
@@ -429,16 +484,17 @@
   justify-content: space-between;
 }
 
-.product_wrapper .next_prev_box {
+.selling_product_frame .product_wrapper .next_prev_box {
   width: 25px;
 }
 
-.next_prev_box img {
+.selling_product_frame .next_prev_box img {
   position: absolute;
   top: 50%;
+  cursor: pointer;
 }
 
-.product_wrapper .product_boxes {
+.selling_product_frame .product_wrapper .product_boxes {
   position: relative;
   width: 1224px;
   height: 452px;
@@ -447,7 +503,7 @@
   flex-direction: row;
 }
 
-.product_boxes .product_box {
+.selling_product_frame .product_boxes .product_box {
   width: 306px;
   height: 100%;
 
@@ -456,12 +512,12 @@
   cursor: pointer;
 }
 
-.product_box .product_img_box {
+.selling_product_frame .product_box .product_img_box {
   width: 100%;
   height: 280px;
 }
 
-.product_img_box .hover_box {
+.selling_product_frame .product_img_box .hover_box {
   display: none;
   width: 100%;
   height: 100%;
@@ -470,7 +526,7 @@
   align-items: center;
 }
 
-.hover_box button {
+.selling_product_frame .hover_box button {
   margin-bottom: 10px;
   width: 260px;
   height: 50px;
@@ -492,18 +548,18 @@
   line-height: 22px; /* 146.667% */
 }
 
-.product_img_box:hover .hover_box {
+.selling_product_frame .product_img_box:hover .hover_box {
   display: flex;
 }
 
-.product_box .product_content_box {
+.selling_product_frame .product_box .product_content_box {
   width: 100%;
   padding: 5px 22px;
   height: auto;
   box-sizing: border-box;
 }
 
-.product_content_box .product_title {
+.selling_product_frame .product_content_box .product_title {
   color: var(--Color-Text-Light, #626974);
   font-family: Jost;
   font-size: 13px;
@@ -513,7 +569,7 @@
   text-transform: uppercase;
 }
 
-.product_content_box .product_desc {
+.selling_product_frame .product_content_box .product_desc {
   margin-top: 7px;
   height: 56px;
   overflow: hidden;
@@ -528,18 +584,18 @@
   line-height: 28px; /* 175% */
 }
 
-.product_content_box .review_box {
+.selling_product_frame .product_content_box .review_box {
   margin-top: 7px;
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-.review_box img {
+.selling_product_frame .review_box img {
   margin-right: 5px;
 }
 
-.review_box span {
+.selling_product_frame .review_box span {
   margin-left: 10px;
   color: var(--Color-Text-Light, #626974);
 
@@ -551,14 +607,14 @@
   line-height: 22px; /* 157.143% */
 }
 
-.product_content_box .price_box {
+.selling_product_frame .product_content_box .price_box {
   margin-top: 10px;
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-.price_box strong {
+.selling_product_frame .price_box strong {
   color: var(--Color-Text-Dark, #041e42);
 
   /* 18 / Medium */
@@ -569,7 +625,7 @@
   line-height: normal;
 }
 
-.price_box span {
+.selling_product_frame .price_box span {
   margin-left: 10px;
   color: var(--Color-Text-Light, #626974);
   font-family: Jost;
@@ -577,5 +633,5 @@
   font-style: normal;
   font-weight: 400;
   line-height: 22px; /* 157.143% */
-  text-decoration-line: strikethrough;
+  text-decoration-line: line-through;
 }
